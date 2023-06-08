@@ -3,17 +3,18 @@ include "conexao.php";
 
 //5 Usuários e 20 transações
 
-$dbname = "POSTGET";
-$sql = "CREATE DATABASE $dbname";
+$dbName = "POSTGET";
+$sql = "CREATE DATABASE $dbName";
 
-if ($conn->query($sqlCreateDB) === TRUE) {
+if ($conn->query($sql) === TRUE) {
     echo "Banco de dados criado com sucesso.<br>";
 } else {
     echo "Erro ao criar o banco de dados: " . $conn->error;
 }
 
-$conn->select_db($databaseName);
+$conn->select_db($dbName);
 
+//Tabela de Usuário
 $sql = 'CREATE TABLE USER(
     email varchar(50),
     nome varchar(50),
@@ -24,7 +25,21 @@ $sql = 'CREATE TABLE USER(
 if ($conn->query($sql) === TRUE) {
     echo "Tabela criada com sucesso.";
 } else {
-    echo "Erro ao criar a tabela: " . $conn->error;
+    echo "Erro ao criar a tabela: " . $conn->error;   
+}
+
+//Tabela de Transações
+$sql = 'CREATE TABLE TRANSACAO(
+    valor decimal(10,2),
+    formapagamento varchar(60),
+    datapagamento date,
+    recebidaenviada boolean
+)'; 
+
+if ($conn->query($sql) === TRUE) {
+    echo "Tabela criada com sucesso.";
+} else {
+    echo "Erro ao criar a tabela: " . $conn->error;   
 }
 
 $conn->close();
