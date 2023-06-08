@@ -16,7 +16,7 @@ Para logar, Verificar senha e email
 Página de registro
 
 POST - Registrar transações
-(Valor, Forma de Pagamento, Data de Pagamento, Destinatário)
+(Valor, Forma de Pagamento, Data de Pagamento, (Recebida/Enviada))
 
 -------------------------
 
