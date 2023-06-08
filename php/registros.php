@@ -23,7 +23,7 @@ $sql = 'CREATE TABLE USER(
 )'; 
 
 if ($conn->query($sql) === TRUE) {
-    echo "Tabela criada com sucesso.";
+    echo "Tabela criada com sucesso.<br>";
 } else {
     echo "Erro ao criar a tabela: " . $conn->error;   
 }
@@ -37,7 +37,7 @@ $sql = 'CREATE TABLE TRANSACAO(
 )'; 
 
 if ($conn->query($sql) === TRUE) {
-    echo "Tabela criada com sucesso.";
+    echo "Tabela criada com sucesso.<br>";
 } else {
     echo "Erro ao criar a tabela: " . $conn->error;   
 }
@@ -53,7 +53,7 @@ VALUES ('miguelbzr6@gmail.com', 'Miguel', '12345678', 'comercial'),
 ('ana.marketing@gmail.com', 'Ana', '1275675234', 'outro')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Dados adicionados com sucesso.";
+    echo "Dados adicionados com sucesso.<br>";
 } else {
     echo "Erro ao adicionar dados: " . $conn->error;   
 }
@@ -83,7 +83,7 @@ VALUES ('500', 'boleto', '2023-05-20', '1'),
 ";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Dados adicionados com sucesso.";
+    echo "Dados adicionados com sucesso.<br>";
 } else {
     echo "Erro ao adicionar dados: " . $conn->error;   
 }
