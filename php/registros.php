@@ -60,7 +60,26 @@ if ($conn->query($sql) === TRUE) {
 
 //Adicionando dados na Tabela de Transações
 $sql = "INSERT INTO TRANSACAO (valor, formapagamento, datapagamento, recebidaenviada)
-VALUES ('1000', 'pix', 'date('Y-m-d', strtotime('1990-05-20'))', 'TRUE'),
+VALUES ('500', 'boleto', '2023-05-20', '1'),
+('1000', 'transferecia', '2020-04-10', '0'),
+('1200', 'boleto', '2022-02-15', '1'),
+('1878', 'cartao', '2021-01-19', '1'),
+('1950', 'pix', '2020-07-12', '0'),
+('1320', 'transferecia', '2022-02-06', '0'),
+('543', 'pix', '2020-05-02', '1'),
+('863', 'boleto', '2023-04-05', '0'),
+('1000', 'pix', '2020-01-08', '0'),
+('2090', 'boleto', '2022-02-21', '1'),
+('3030', 'transferecia', '2020-09-23', '1'),
+('502', 'pix', '2021-03-21', '1'),
+('320', 'boleto', '2021-10-14', '0'),
+('101', 'cartao', '2022-08-08', '1'),
+('202', 'cartao', '2022-07-05', '0'),
+('403', 'boleto', '2023-02-04', '0'),
+('102', 'pix', '2020-03-30', '1'),
+('210', 'pix', '2021-05-12', '0'),
+('981', 'cartao', '2022-10-16', '1'),
+('760', 'transferecia', '2020-12-05', '0')
 ";
 
 if ($conn->query($sql) === TRUE) {
