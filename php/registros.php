@@ -42,6 +42,32 @@ if ($conn->query($sql) === TRUE) {
     echo "Erro ao criar a tabela: " . $conn->error;   
 }
 
-$conn->close();
+//Adicionando dados na Tabela de Usuário
+$sql = "INSERT INTO USER (email, nome, senha, profissao)
+VALUES ('miguelbzr6@gmail.com', 'Miguel', '12345678', 'comercial'),
+('miggshelly@gmail.com', 'Michele', '1423425678', 'comercial'),
+('vinicius.goi@gmail.com', 'Vinicius', '1233434678', 'financeiro'),
+('mikael.operacional@gmail.com', 'Mikael', '126534378', 'operacional'),
+('igor.financias@gmail.com', 'Igor', '1224342112', 'financeiro'),
+('jorge.adm@gmail.com', 'Jorge', '112132354', 'administrativo'),
+('ana.marketing@gmail.com', 'Ana', '1275675234', 'outro')";
 
+if ($conn->query($sql) === TRUE) {
+    echo "Dados adicionados com sucesso.";
+} else {
+    echo "Erro ao adicionar dados: " . $conn->error;   
+}
+
+//Adicionando dados na Tabela de Transações
+$sql = "INSERT INTO TRANSACAO (valor, formapagamento, datapagamento, recebidaenviada)
+VALUES ('1000', 'pix', 'date('Y-m-d', strtotime('1990-05-20'))', 'TRUE'),
+";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Dados adicionados com sucesso.";
+} else {
+    echo "Erro ao adicionar dados: " . $conn->error;   
+}
+
+$conn->close();
 ?>
