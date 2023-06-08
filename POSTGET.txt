@@ -1,0 +1,31 @@
+1 Usuário
+
+Funções - Registrar e Filtrar transações
+
+-------------------------
+
+Página de Cadastro ou Login
+
+
+Cadastro Email, senha, Nome e Profissão
+
+Para logar, Verificar senha e email
+
+-------------------------
+
+Página de registro
+
+POST - Registrar transações
+(Valor, Forma de Pagamento, Data de Pagamento, Destinatário)
+
+-------------------------
+
+Página de busca 
+
+GET - Filtrar e visualizar transações
+(Escolhe qual tipo de filtragem - Individulmente)
+
+-------------------------
+
+
+Integrar Banco de Dados com o saldo atual
