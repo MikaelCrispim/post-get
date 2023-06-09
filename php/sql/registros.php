@@ -16,6 +16,7 @@ $conn->select_db($dbName);
 
 //Tabela de Usuário
 $sql = 'CREATE TABLE USER(
+    id INT AUTO_INCREMENT PRIMARY KEY,
     email varchar(50),
     nome varchar(50),
     senha varchar(50),
