@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="areaForm">
+    <a href="./php/verificacao.php">a</a>
+    <!-- <div class="areaForm">
         <div class="form">
             <form action="src/login.html" method="post">
                 <input type="text" name="name" placeholder="Nome" maxlength="15" required autofocus><br>
@@ -28,6 +29,6 @@
                 <p style="margin-left:85px;color:#fff">Já possui uma conta? <a style="color:#fff" href="./src/login.php">Entrar</a></p>
             </form>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>
