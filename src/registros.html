@@ -10,7 +10,7 @@
 <body>
     <div class="form_transacoes">
         <form action="?" method="post">
-            <input type="number" placeholder="Valor" step="any" min="0" required>
+            <input type="number" placeholder="Valor" name="value"step="any" min="0" required>
             <label>Forma de pagamento</label>
             <select name="" required>
                 <option value="">Boleto</option>
@@ -21,8 +21,8 @@
             <input type="date" name="dateRegister" required>
             <label for="">Sacar/Transferir</label>
             <select name="">
-                <option name="transferir">Transferência</option>
-                <option name="saque">Sacar</option>
+                <option value="1">Transferência</option>
+                <option value="0">Sacar</option>
             </select>
             <input type="submit" value="Realizar" name="btnRegister" class="btnRegister">
         </form>
