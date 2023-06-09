@@ -8,7 +8,7 @@
     <title>POST E GET</title>
 </head>
 <body>
-    <?php include "/php/verificacao.php"?>
+    <?php include "../php/verificacao.php"?>
     <div class="form_verificacoes">
         <form action="?" method="get">
             <label>Qual a forma de filtragem?</label>
