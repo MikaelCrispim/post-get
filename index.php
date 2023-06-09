@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <!-- <a href="./src/verificacao.php">a</a>; -->
     <div class="areaForm">
         <div class="form">
             <form action="src/login.html" method="post">
