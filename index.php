@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POST e GET</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <a href="./src/verificacao.php">a</a>;
-    <!-- <div class="areaForm">
+    <!-- <a href="./src/verificacao.php">a</a>; -->
+    <div class="areaForm">
         <div class="form">
             <form action="src/login.html" method="post">
                 <input type="text" name="name" placeholder="Nome" maxlength="15" required autofocus><br>
@@ -26,8 +26,9 @@
                     <option name="other">Outro</option>
                 </select><br>
                 <input type="submit" value="Cadastrar" class="btnCadastro" name="btnCadastro">
+                <p style="margin-left:85px;color:#fff">Já possui uma conta? <a style="color:#fff" href="./src/login.php">Entrar</a></p>
             </form>
         </div>
-    </div> -->
+    </div>
 </body>
 </html>
