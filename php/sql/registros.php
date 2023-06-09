@@ -4,12 +4,21 @@ include "conexao.php";
 //5 Usuários e 20 transações
 
 $dbName = "POSTGET";
+
+$sql = "DROP DATABASE IF EXISTS $dbName";
+
+if ($conn->query($sql) === TRUE) {
+    echo "<script>console.log('Banco de dados deletado com sucesso.')</script>";
+} else {
+    echo "<script>console.log('Erro ao deletar o banco de dados: " . $conn->error.')</script>';
+}
+
 $sql = "CREATE DATABASE $dbName";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Banco de dados criado com sucesso.<br>";
+    echo "<script>console.log('Banco de dados criado com sucesso.')</script>";
 } else {
-    echo "Erro ao criar o banco de dados: " . $conn->error;
+    echo "<script>console.log('Erro ao criar o banco de dados: " . $conn->error.')</script>';
 }
 
 $conn->select_db($dbName);
@@ -24,9 +33,9 @@ $sql = 'CREATE TABLE USER(
 )'; 
 
 if ($conn->query($sql) === TRUE) {
-    echo "Tabela criada com sucesso.<br>";
+    echo "<script>console.log('Tabela criada com sucesso.')</script>";
 } else {
-    echo "Erro ao criar a tabela: " . $conn->error;   
+    echo "<script>console.log('Erro ao criar a tabela: " . $conn->error.')</script>';   
 }
 
 //Tabela de Transações
@@ -38,9 +47,9 @@ $sql = 'CREATE TABLE TRANSACAO(
 )'; 
 
 if ($conn->query($sql) === TRUE) {
-    echo "Tabela criada com sucesso.<br>";
+    echo "<script>console.log('Tabela criada com sucesso.')</script>";
 } else {
-    echo "Erro ao criar a tabela: " . $conn->error;   
+    echo "<script>console.log('Erro ao criar a tabela: " . $conn->error.')</script>';   
 }
 
 //Adicionando dados na Tabela de Usuário
@@ -54,9 +63,9 @@ VALUES ('miguelbzr6@gmail.com', 'Miguel', '12345678', 'comercial'),
 ('ana.marketing@gmail.com', 'Ana', '1275675234', 'outro')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Dados adicionados com sucesso.<br>";
+    echo "<script>console.log('Dados adicionados com sucesso.')</script>";
 } else {
-    echo "Erro ao adicionar dados: " . $conn->error;   
+    echo "<script>console.log('Erro ao adicionar dados: " . $conn->error.')</script>';   
 }
 
 //Adicionando dados na Tabela de Transações
@@ -84,9 +93,9 @@ VALUES ('500', 'boleto', '2023-05-20', '1'),
 ";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Dados adicionados com sucesso.<br>";
+    echo "<script>console.log('Dados adicionados com sucesso.')</script>";
 } else {
-    echo "Erro ao adicionar dados: " . $conn->error;   
+    echo "<script>console.log('Erro ao adicionar dados: " . $conn->error.')</script>';   
 }
 
 $conn->close();
