@@ -7,7 +7,7 @@ if(isset($_GET['verificacoes'])){
             <label>Escolha a data entre a data:</label>
             <br><input type=date name=dateInicio><br>
             <input type=date name=dateFim><br>
-            <input type=submit value=Filtrar>
+            <input type=submit value=Filtrar><input type=submit value=Back>
             </form>";
             break;
         case 2:

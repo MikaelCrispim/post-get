@@ -1,0 +1,3 @@
+<?php
+switch($_POST[""]);
+?>
