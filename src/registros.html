@@ -10,18 +10,18 @@
 <body>
     <div class="form_transacoes">
         <form action="?" method="post">
-            <input type="number" placeholder="Valor" name="value"step="any" min="0" required>
+            <input type="number" placeholder="Valor" name="value" step="any" min="0" required>
             <label>Forma de pagamento</label>
-            <select name="" required>
-                <option value="">Boleto</option>
-                <option value="">Pix</option>
-                <option value="">Cartão de crédito/débito</option>
-                <option value="">Transferência Bancária</option>>
+            <select name="formaPagamento" required>
+                <option value="boleto">Boleto</option>
+                <option value="pix">Pix</option>
+                <option value="cartao">Cartão de crédito/débito</option>
+                <option value="transferencia">Transferência Bancária</option>>
             </select>
             <label for="">Data da transação</label>
             <input type="date" name="dateRegister" required>
             <label for="">Sacar/Transferir</label>
-            <select name="">
+            <select name="sacar">
                 <option value="1">Transferência</option>
                 <option value="0">Sacar</option>
             </select>
