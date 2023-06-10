@@ -12,7 +12,7 @@ $sql = "INSERT INTO TRANSACAO (valor, formapagamento, datapagamento, recebidaenv
 VALUES ('$valor', '$formapagamento', '$datapagamento', '$recebidaenviada')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "<script>console.log('Dado adicionado com sucesso.')</script>";
+    echo "Dados adicionados com sucesso";
 } else {
     echo "<script>console.log('Erro ao adicionar dado: " . $conn->error.')</script>';   
 }
