@@ -5,14 +5,12 @@ $conn->select_db('POSTGET');
 $email = $conn->real_escape_string($_POST['email_login']);
 $senha = $conn->real_escape_string($_POST['password_login']);
 
-$sql = "SELECT * FROM USER WHERE email = '$email' AND senha = '$senha'";
-$sql_query = $conn->query($sql) or die("Falha na execução do código SQL" . $conn->error);
+$sql = "SELECT * FROM USER WHERE email = '$email' LIMIT 1";
+$sql_query = $conn->query($sql) or die("Falha na execução do código SQL");
 
-$quantidade = $sql_query -> num_rows;
+$usuario = $sql_query->fetch_assoc();
 
-if($quantidade == 1){
-    $usuario = $sql_query->fetch_assoc();
-
+if(isset($usuario) && password_verify($senha, $usuario['senha'])){
     include 'sessionStart.php';
 
     $_SESSION['user'] = $usuario['id'];
@@ -20,6 +18,6 @@ if($quantidade == 1){
 
     header('Location: ./registros.php');
 }else{
-    echo 'Falha ao logar! E-mail ou senha incorretos';
+    echo "<p class ='msg'>Falha ao logar! E-mail ou senha incorretos</p>";
 }
 ?>
