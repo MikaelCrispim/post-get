@@ -1,11 +1,14 @@
 <?php
-$email = $mysqli->real_escape_string($_POST['email']);
-$senha = $mysqli->real_escape_string($_POST['senha']);
+include __DIR__.'/../sql/conexao.php';
+$conn->select_db('POSTGET');
+
+$email = $conn->real_escape_string($_POST['email_login']);
+$senha = $conn->real_escape_string($_POST['password_login']);
 
 $sql = "SELECT * FROM USER WHERE email = '$email' AND senha = '$senha'";
-$sql_query = $mysqli->query($sql) or die("Falha na execução do código SQL" . $mysqli->error);
+$sql_query = $conn->query($sql) or die("Falha na execução do código SQL" . $conn->error);
 
-$quantidade = $sql_query -> $num_rows;
+$quantidade = $sql_query -> num_rows;
 
 if($quantidade == 1){
     $usuario = $sql_query->fetch_assoc();
@@ -14,6 +17,8 @@ if($quantidade == 1){
 
     $_SESSION['user'] = $usuario['id'];
     $_SESSION['name'] = $usuario['nome'];
+
+    header('Location: ./registros.php');
 }else{
     echo 'Falha ao logar! E-mail ou senha incorretos';
 }

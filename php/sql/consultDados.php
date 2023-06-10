@@ -3,7 +3,7 @@ include "conexao.php";
 
 $conn->select_db('POSTGET');
 
-switch($_POST["verificacoes"]){
+switch($_GET["verificacoes"]){
     case 1:
         $dateInicio = $_GET['dateInicio'];
         $dateFim = $_GET['dateFim'];
