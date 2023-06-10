@@ -22,6 +22,41 @@ if(!isset($_SESSION['user'])){
     <title>POST E GET</title>
 </head>
 <body>
+    <style>
+        nav {
+            background-color:#6f42c1;
+        }
+        .navbar {
+            --bs-navbar-hover-color: rgb(91, 0, 171);
+        }
+        .nav-link {
+            color:#fff;
+        }
+        .navbar-nav a:hover{
+             color: #a64534;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">DS Bank</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./registros.php">Registrar transações</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./../php/verificacao.php">Consultar transações</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./../php/login/logout.php">Logout</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
     <div class="form_transacoes">
         <form action="?" method="post">
             <input type="number" placeholder="Valor" name="value" step="any" min="0" required><br>

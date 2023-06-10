@@ -4,13 +4,15 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body {
+    background-image: url("./Background.jpg");
+}
 ::placeholder {
     padding-left: 2px;
 }
 .formLoginArea {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(90deg,rgb(56, 53, 53), rgb(68, 66, 66));
     display: flex;
     justify-content: center;
     align-items: center;
