@@ -19,11 +19,11 @@
                 <input type="password" name="password" placeholder="Senha" minlength="8" required><br>
                 <label style="color:#fff">Profissão</label><br>
                 <select name="profession">
-                    <option name="adm">Administrativo</option>
-                    <option name="cml">Comercial</option>
-                    <option name="fin">Financeiro</option>
-                    <option name="ope">Operacional</option>
-                    <option name="other">Outro</option>
+                    <option value = "administrativo" name="adm">Administrativo</option>
+                    <option value = "comercial" name="cml">Comercial</option>
+                    <option value = "financeiro" name="fin">Financeiro</option>
+                    <option value = "operacional" name="ope">Operacional</option>
+                    <option value = "outro" name="other">Outro</option>
                 </select><br>
                 <input type="submit" value="Cadastrar" class="btnCadastro" name="btnCadastro">
                 <p style="margin-left:85px;color:#fff">Já possui uma conta? <a style="color:#fff" href="./src/login.php">Entrar</a></p>
