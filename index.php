@@ -1,3 +1,8 @@
+<?php
+    if(isset($_POST['name'])){
+        include './php/login/register.php';
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,12 +15,11 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <a href="./php/verificacao.php">a</a>
-    <!-- <div class="areaForm">
+    <div class="areaForm">
         <div class="form">
             <form action="src/login.html" method="post">
                 <input type="text" name="name" placeholder="Nome" maxlength="15" required autofocus><br>
-                <input type="text" name="email" placeholder="Email" required><br>
+                <input type="email" name="email" placeholder="Email" required><br>
                 <input type="password" name="password" placeholder="Senha" minlength="8" required><br>
                 <label style="color:#fff">Profissão</label><br>
                 <select name="profession">
@@ -29,6 +33,6 @@
                 <p style="margin-left:85px;color:#fff">Já possui uma conta? <a style="color:#fff" href="./src/login.php">Entrar</a></p>
             </form>
         </div>
-    </div> -->
+    </div>
 </body>
 </html>
