@@ -17,7 +17,7 @@
 <body>
     <div class="areaForm">
         <div class="form">
-            <form action="src/login.html" method="post">
+            <form action="src/login.php" method="post">
                 <input type="text" name="name" placeholder="Nome" maxlength="15" required autofocus><br>
                 <input type="email" name="email" placeholder="Email" required><br>
                 <input type="password" name="password" placeholder="Senha" minlength="8" required><br>
