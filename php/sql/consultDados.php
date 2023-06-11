@@ -31,9 +31,9 @@ $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
-        echo "Valor: " . $row["valor"]. "- Forma de Pagamento: " . $row["formapagamento"]. "- Data de Pagamento: " . $row["datapagamento"]. "- Recebida/Enviada: " . $row["recebidaenviada"]. "<br>";
+        echo "<p class='result'> Valor: " . $row["valor"]. "- Forma de Pagamento: " . $row["formapagamento"]. "- Data de Pagamento: " . $row["datapagamento"]. "- Recebida/Enviada: " . $row["recebidaenviada"]. "</p>";
     }
 } else {
-    echo "Não há registro na tabela.";
+    echo "<p class='result'>Não há registro na tabela.<p>";
 }
 ?>
