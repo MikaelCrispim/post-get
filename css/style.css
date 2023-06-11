@@ -6,6 +6,8 @@
 }
 body {
     background-image: url('./Background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 ::placeholder {
     padding-left: 2px;
