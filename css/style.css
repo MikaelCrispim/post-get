@@ -3,14 +3,25 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    overflow-y: hidden;
 }
 body {
     background-image: url('./Background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 ::placeholder {
     padding-left: 2px;
+    color: #fff;
+}
+.msg {
+    top: 100px;
+    position: relative;
+    color: #fff;
 }
 .areaForm{
     width: 100%;
@@ -23,7 +34,7 @@ body {
     display: flex;
     width: 400px;
     height: 400px;
-    background-color: #f40;
+    background-color: #6f42c1;
     justify-content: flex-start;
     align-items: flex-start;
     border-radius: 8px;
@@ -41,6 +52,9 @@ body {
     margin-top:10px;
 }
 .form form input {
+    background-color: transparent;
+    border:1px solid #fff;
+    color: #fff;
     margin-bottom: 10px;
     border-radius: 8px;
     height: 40px;
@@ -50,6 +64,8 @@ body {
     width: 390px;
     height: 30px;
     margin-top: 60px;
+    background-color: #fff;
+    color: #6f42c1;
     margin-left: 5px;
     cursor: pointer;
 }

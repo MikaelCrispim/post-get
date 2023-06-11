@@ -30,10 +30,30 @@ switch($_GET["verificacoes"]){
 $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result) > 0) {
+    echo "<div class='consult'>
+    <table class='tab'>
+            <thread>
+                <tr>
+                    <th>Valor</th>
+                    <th>Forma de pagamento</th>
+                    <th>Data de pagamento</th>
+                    <th>Recebida/Enviada</th>
+                <tr>
+            </thread>
+            <tbody>";
     while($row = mysqli_fetch_assoc($result)) {
-        echo "<p class='result'> Valor: " . $row["valor"]. "- Forma de Pagamento: " . $row["formapagamento"]. "- Data de Pagamento: " . $row["datapagamento"]. "- Recebida/Enviada: " . $row["recebidaenviada"]. "</p>";
+        echo "<tr>
+            <td> R$ " . $row["valor"]. "</td>
+            <td>" . $row["formapagamento"]."</td>
+            <td>" . $row["datapagamento"]."</td>
+            <td>". $row["recebidaenviada"]."</td>
+            <tr>";
     }
+    echo "</tbody>
+    </table>";
 } else {
-    echo "<p class='result'>Não há registro na tabela.<p>";
+    echo "
+    <div class='consult'>
+    <p class='result' style='color:#fff;'>Não há registro na tabela.<p>";
 }
 ?>

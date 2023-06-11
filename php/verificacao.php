@@ -4,7 +4,7 @@ if(!isset($_SESSION)) {
 }
 
 if(!isset($_SESSION['user'])){
-    die("Faça o login para acessar a página. <p><a href =\"./../index.php\">Entrar</a></p>");
+    die("<p style='text-align:center;'>Faça o login para acessar a página. <a href =\"./../index.php\" style='text-decoration: none;';>Entrar</a></p>");
 }
 ?>
 <!DOCTYPE html>
@@ -46,6 +46,7 @@ if(!isset($_SESSION['user'])){
     if($_SERVER["REQUEST_METHOD"] == 'GET'){
         if(empty($_GET['verificacoes'])){
             ?>
+    <div class="form_verificacao">
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
         <label>Qual a forma de filtragem?</label><br>
         <select name="verificacoes">
@@ -55,7 +56,6 @@ if(!isset($_SESSION['user'])){
             <option value="4" name="receivedSend">Recebida/Enviada</option>
         </select><br>
         <input type="submit" value="Ok" name="btnFilter" class="btnFilter">
-        <button><a href="./verificacao.php">Voltar</a></button>
     </form>
     <?php
         }
@@ -63,27 +63,32 @@ if(!isset($_SESSION['user'])){
     switch ($_GET['verificacoes']) {
         case 1:
             ?>
+            <div class="form_verificacao">
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
             <label>Deseja verificar depósitos que foram realizados em qual período:</label>
             <br><input type=date name=dateInicio><br>
             <input type=date name=dateFim><br>
             <input type="hidden" name="verificacoes" value="<?php echo $_GET["verificacoes"]; ?>">
             <input type="submit" value="Ok" name="btnFilter" class="btnFilter">
-        </form>
+            </form>
+            </div>
             <?php
             break;
         case 2:
             ?>
+            <div class="form_verificacao">
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
             <label>Deseja verificar depósitos que foram realizados até qual quantia?</label>
             <br><input type=number placeholder=Valor name=value_ver step=any min=0><br>
             <input type="hidden" name="verificacoes" value="<?php echo $_GET["verificacoes"]; ?>">
             <input type="submit" value="Ok" name="btnFilter" class="btnFilter">
-        </form>
+            </form>
+            </div>
             <?php
             break;
         case 3:
             ?>
+            <div class="form_verificacao">
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
             <label>Deseja verificar depósitos que foram realizados com qual forma de pagamento?</label>
             <select name=formaPagamento_ver><br>
@@ -94,11 +99,13 @@ if(!isset($_SESSION['user'])){
             </select><br>
             <input type="hidden" name="verificacoes" value="<?php echo $_GET["verificacoes"]; ?>">
             <input type="submit" value="Ok" name="btnFilter" class="btnFilter">
-        </form>
+            </form>
+            </div>
             <?php
             break;
         case 4:
             ?>
+            <div class="form_verificacao">
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
             <label>Deseja verificar depósitos que foram enviados ou recebidos?</label>
             <select name=receivedSend_ver><br>
@@ -107,7 +114,9 @@ if(!isset($_SESSION['user'])){
             </select><br>
             <input type="hidden" name="verificacoes" value="<?php echo $_GET["verificacoes"]; ?>">
             <input type="submit" value="Ok" name="btnFilter" class="btnFilter">
-        </form><?php
+        </form>
+        </div>
+        </div><?php
             break;
 }
 }else{

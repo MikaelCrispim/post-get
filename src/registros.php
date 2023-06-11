@@ -4,7 +4,7 @@ if(!isset($_SESSION)) {
 }
 
 if(!isset($_SESSION['user'])){
-    die("Faça o login para acessar a página. <p><a href =\"./../index.php\">Entrar</a></p>");
+    die("<p style='text-align:center;'>Faça o login para acessar a página. <a href =\"./../index.php\" style='text-decoration: none;';>Entrar</a></p>");
 }
 ?>
 <!DOCTYPE html>
@@ -22,20 +22,6 @@ if(!isset($_SESSION['user'])){
     <title>POST E GET</title>
 </head>
 <body>
-    <style>
-        nav {
-            background-color:#6f42c1;
-        }
-        .navbar {
-            --bs-navbar-hover-color: rgb(91, 0, 171);
-        }
-        .nav-link {
-            color:#fff;
-        }
-        .navbar-nav a:hover{
-             color: #a64534;
-        }
-    </style>
     <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">DS Bank</a>
@@ -59,6 +45,7 @@ if(!isset($_SESSION['user'])){
     </nav>
     <div class="form_transacoes">
         <form action="?" method="post">
+            <label>Valor</label>
             <input type="number" placeholder="Valor" name="value" step="any" min="0" required><br>
             <label>Forma de pagamento</label>
             <select name="formaPagamento" required><br>
@@ -71,8 +58,8 @@ if(!isset($_SESSION['user'])){
             <input type="date" name="dateRegister" required><br>
             <label for="">Sacar/Transferir</label>
             <select name="sacar" required><br>
-                <option value="1">Transferência</option>
-                <option value="0">Sacar</option>
+                <option value="Enviada">Transferência</option>
+                <option value="Recebida">Sacar</option>
             </select><br>
             <input type="submit" value="Realizar" name="btnRegister" class="btnRegister">
         </form>

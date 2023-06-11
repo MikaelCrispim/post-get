@@ -11,6 +11,7 @@ body {
 }
 ::placeholder {
     padding-left: 2px;
+    color: #fff;
 }
 .formLoginArea {
     width: 100%;
@@ -23,10 +24,14 @@ body {
     display: flex;
     width: 300px;
     height: 300px;
-    background-color: #f40;
+    background-color: #6f42c1;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-direction: column-reverse;
     border-radius: 8px;
+}
+.msg {
+    color: #f00;
 }
 .form_login form input {
     margin-left: 5px;
@@ -40,6 +45,10 @@ body {
     border-radius: 8px;
     height: 40px;
     width: 290px;
+    background-color: transparent;
+    border:1px solid #fff;
+    color: #fff;
+    border-radius: 8px;
 }
 .form_login form input[type = 'submit']{
     width: 290px;
@@ -47,5 +56,7 @@ body {
     margin-top: 70px;
     margin-bottom: 10px;
     margin-left: 5px;
+    background-color: #fff;
+    color: #6f42c1;
     cursor: pointer;
 }

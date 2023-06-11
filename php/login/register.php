@@ -12,7 +12,7 @@ $sql = "SELECT email FROM USER WHERE email = '$email'";
 $sql_query = $conn->query($sql) or die("Falha na execução do código SQL");
 $quantidade = $sql_query -> num_rows;
 if ($quantidade == 1) {
-    echo "<p class ='msg'>Email já Registrado.</p>";
+    echo "<p class ='msg'>Email já possui registro.</p>";
 } else {
     $sql = "INSERT INTO USER (email, nome, senha, profissao) VALUES ('$email', '$nome', '$senha', '$profissao')";
 
