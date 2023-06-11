@@ -1,7 +1,6 @@
 <?php
     if(isset($_POST['name'])){
         include __DIR__ . "/php/login/register.php";
-        header("Location: ./src/login.php"); 
 	}
     ?>
 <!DOCTYPE html>
