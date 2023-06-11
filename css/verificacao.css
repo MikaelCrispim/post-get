@@ -3,7 +3,6 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    overflow-y: hidden;
 }
 ::placeholder {
     color: rgb(177, 166, 166);

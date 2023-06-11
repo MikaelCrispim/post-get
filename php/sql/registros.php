@@ -93,11 +93,7 @@ VALUES ('500', 'boleto', '2023-05-20', 'Recebida'),
 ('320', 'boleto', '2021-10-14', 'Enviada'),
 ('101', 'cartao', '2022-08-08', 'Recebida'),
 ('202', 'cartao', '2022-07-05', 'Enviada'),
-('403', 'boleto', '2023-02-04', 'Enviada'),
-('102', 'pix', '2020-03-30', 'Recebida'),
-('210', 'pix', '2021-05-12', 'Enviada'),
-('981', 'cartao', '2022-10-16', 'Recebida'),
-('760', 'transferecia', '2020-12-05', 'Enviada')
+('403', 'boleto', '2023-02-04', 'Enviada')
 ";
 
 if ($conn->query($sql) === TRUE) {

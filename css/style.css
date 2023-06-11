@@ -34,10 +34,13 @@ body {
     display: flex;
     width: 400px;
     height: 400px;
-    background-color: #6f42c1;
     justify-content: flex-start;
     align-items: flex-start;
     border-radius: 8px;
+    border-radius: 21px;
+    background: #6f42c1;
+    box-shadow: -29px -29px 57px #b26aff, 
+    29px 29px 57px #2c1a4d;
 }
 .form form input,select,label {
     margin-left: 5px;
@@ -53,10 +56,9 @@ body {
 }
 .form form input {
     background-color: transparent;
-    border:1px solid #fff;
+    border-bottom:1px solid #fff;
     color: #fff;
     margin-bottom: 10px;
-    border-radius: 8px;
     height: 40px;
     width: 390px;
 }
@@ -68,4 +70,5 @@ body {
     color: #6f42c1;
     margin-left: 5px;
     cursor: pointer;
+    border-radius: 8px;
 }

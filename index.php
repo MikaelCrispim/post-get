@@ -29,7 +29,7 @@
                     <option value = "operacional" name="ope">Operacional</option>
                     <option value = "outro" name="other">Outro</option>
                 </select><br>
-                <input type="submit" value="Cadastrar" class="btnCadastro" name="btnCadastro">
+                <input type="submit" value="Cadastrar" class="button" name="btnCadastro">
                 <p style="margin-left:85px;color:#fff">Já possui uma conta? <a style="color:#fff" href="./src/login.php">Entrar</a></p>
             </form>
         </div>

@@ -13,7 +13,7 @@ VALUES ('$valor', '$formapagamento', '$datapagamento', '$recebidaenviada')";
 
 if ($conn->query($sql) === TRUE) {
     echo "<div class='dd'>
-    Dados adicionados com sucesso!";
+    $recebidaenviada com sucesso!";
 } else {
     echo "<script>console.log('Erro ao adicionar dado: " . $conn->error.')</script>';   
 }
