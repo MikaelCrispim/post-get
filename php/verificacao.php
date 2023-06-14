@@ -48,7 +48,7 @@ if(!isset($_SESSION['user'])){
             ?>
     <div class="form_verificacao">
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
-        <label>Qual a forma de filtragem?</label><br>
+    <label style="position:relative">Seja bem-vindo, <?php echo $_SESSION['name']?>!</label>
         <select name="verificacoes">
             <option value="1" name="dateFilter">Data da transação</option>
             <option value="2" name="valor">Valor</option>
