@@ -34,6 +34,7 @@ if(mysqli_num_rows($result) > 0) {
     <table class='tab'>
             <thread>
                 <tr>
+                    <th>Responsável</th>
                     <th>Valor</th>
                     <th>Forma de pagamento</th>
                     <th>Data de pagamento</th>
@@ -43,6 +44,7 @@ if(mysqli_num_rows($result) > 0) {
             <tbody>";
     while($row = mysqli_fetch_assoc($result)) {
         echo "<tr>
+            <td>" . $row["nome"]. "</td>
             <td> R$ " . $row["valor"]. "</td>
             <td>" . $row["formapagamento"]."</td>
             <td>" . $row["datapagamento"]."</td>
