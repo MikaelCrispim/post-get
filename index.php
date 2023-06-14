@@ -33,7 +33,7 @@
                 <p style="margin-left:85px;color:#fff">Já possui uma conta? <a style="color:#fff" href="./src/login.php">Entrar</a></p>
             </form>
         </div>
-        <a href="./php/sql/registros.php" style="color:#fff;position:absolute; bottom:0; right:0;">Iniciar banco de dados</a>
+        <a href="./php/sql/startBD.php" style="color:#fff;position:absolute; bottom:0; right:0;">Iniciar banco de dados</a>
     </div>
 </body>
 </html>
