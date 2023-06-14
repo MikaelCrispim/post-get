@@ -44,6 +44,7 @@ if(!isset($_SESSION['user'])){
     </div>
     </nav>
     <div class="form_transacoes">
+        <label>Seja bem-vindo, <?php echo $_SESSION['name']?>!</label>
         <form action="?" method="post">
             <label>Valor</label>
             <input type="number" placeholder="Valor" name="value" step="any" min="0" required><br>

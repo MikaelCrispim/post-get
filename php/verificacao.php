@@ -91,11 +91,11 @@ if(!isset($_SESSION['user'])){
             <div class="form_verificacao">
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
             <label>Deseja verificar depósitos que foram realizados com qual forma de pagamento?</label>
-            <select name=formaPagamento_ver><br>
-                <option value=boleto_ver>Boleto</option>
-                <option value=pix_ver>Pix</option>
-                <option value=cartao_ver>Cartão de crédito/débito</option>
-                <option value=transferencia_ver>Transferência Bancária</option>
+            <select name=formaPagamento><br>
+                <option value=boleto>Boleto</option>
+                <option value=pix>Pix</option>
+                <option value=cartao>Cartão de crédito/débito</option>
+                <option value=transferencia>Transferência Bancária</option>
             </select><br>
             <input type="hidden" name="verificacoes" value="<?php echo $_GET["verificacoes"]; ?>">
             <input type="submit" value="Ok" name="btnFilter" class="btnFilter">
