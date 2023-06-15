@@ -80,20 +80,20 @@ if ($conn->query($sql) === TRUE) {
 //Adicionando dados na Tabela de Transações
 $sql = "INSERT INTO TRANSACAO (valor, formapagamento, datapagamento, recebidaenviada, nome)
 VALUES ('500', 'boleto', '2023-05-20', 'Recebida', 'Miguel'),
-('1000', 'transferecia', '2020-04-10', 'Enviada', 'Mikael'),
+('1000', 'transferencia', '2020-04-10', 'Enviada', 'Mikael'),
 ('1200', 'boleto', '2022-02-15', 'Recebida', 'Michele'),
 ('1878', 'cartao', '2021-01-19', 'Recebida', 'Igor'),
 ('1950', 'pix', '2020-07-12', 'Enviada', 'Vinicius'),
-('1320', 'transferecia', '2022-02-06', 'Enviada'),
+('1320', 'transferencia', '2022-02-06', 'Enviada', 'Ana'),
 ('543', 'pix', '2020-05-02', 'Recebida', 'Jorge'),
 ('863', 'boleto', '2023-04-05', 'Enviada', 'Ana'),
 ('1000', 'pix', '2020-01-08', 'Enviada', 'Michele'),
 ('2090', 'boleto', '2022-02-21', 'Recebida', 'Mikael'),
-('3030', 'transferecia', '2020-09-23', 'Recebida', 'Igor'),
+('3030', 'transferencia', '2020-09-23', 'Recebida', 'Igor'),
 ('502', 'pix', '2021-03-21', 'Recebida', 'Ana'),
 ('320', 'boleto', '2021-10-14', 'Enviada', 'Jorge'),
 ('101', 'cartao', '2022-08-08', 'Recebida', 'Mikael'),
-('202', 'cartao', '2022-07-05', 'Enviada', 'Miguel'),
+('202', 'transferencia', '2022-07-05', 'Enviada', 'Miguel'),
 ('403', 'boleto', '2023-02-04', 'Enviada', 'Vinicius')
 ";
 

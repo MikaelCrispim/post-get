@@ -43,11 +43,14 @@ if(mysqli_num_rows($result) > 0) {
             </thread>
             <tbody>";
     while($row = mysqli_fetch_assoc($result)) {
+        $data = $row["datapagamento"];
+        $date = new DateTime($data);
+        
         echo "<tr>
             <td>" . $row["nome"]. "</td>
             <td> R$ " . $row["valor"]. "</td>
             <td>" . $row["formapagamento"]."</td>
-            <td>" . $row["datapagamento"]."</td>
+            <td>" . $date->format('d/m/Y')."</td>
             <td>". $row["recebidaenviada"]."</td>
             <tr>";
     }

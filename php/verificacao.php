@@ -91,7 +91,7 @@ if(!isset($_SESSION['user'])){
             <div class="form_verificacao">
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
             <label>Deseja verificar depósitos que foram realizados com qual forma de pagamento?</label>
-            <select name=formaPagamento><br>
+            <select name=formaPagamento_ver><br>
                 <option value=boleto>Boleto</option>
                 <option value=pix>Pix</option>
                 <option value=cartao>Cartão de crédito/débito</option>
