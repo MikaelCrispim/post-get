@@ -52,7 +52,7 @@ if(mysqli_num_rows($result) > 0) {
             <td>" . $row["formapagamento"]."</td>
             <td>" . $date->format('d/m/Y')."</td>
             <td>". $row["recebidaenviada"]."</td>
-            <tr>";
+            </tr>";
     }
     echo "</tbody>
     </table>";

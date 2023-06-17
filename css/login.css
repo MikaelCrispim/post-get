@@ -1,63 +1,107 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 body {
     background-image: url("./Background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 ::placeholder {
-    padding-left: 2px;
-    color: #fff;
+    color: #C2C2C2;
 }
+
+.form_login input:focus::-webkit-input-placeholder {
+    color: #1F7F45;
+}
+
 .formLoginArea {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
+
 .form_login {
+    border: 2px solid #ffffff79;
     display: flex;
     width: 300px;
     height: 300px;
     justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column-reverse;
-    border-radius: 21px;
-    background: #6f42c1;
-    box-shadow:  29px 29px 57px #2c1a4d,
-             -29px -29px 57px #b26aff;
+    align-items: center;
+    border-radius: 30px;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    box-shadow: -29px -29px 57px #ffffff3e,
+        29px 29px 57px #0000006e;
 }
-.msg {
-    color: #f00;
-}
-.form_login form input {
-    margin-left: 5px;
-    margin-top: 30px;
+
+.form_login form input,
+select,
+label {
     outline: none;
     box-shadow: none;
     border: none;
 }
-.form_login form input {
-    margin-bottom: 1px;
-    height: 40px;
-    width: 290px;
-    background-color: transparent;
-    border-bottom:1px solid #fff;
-    color: #fff;
+
+form {
+    padding-top: 30px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
-.form_login form input[type = 'submit']{
-    border-radius: 8px;
-    width: 290px;
-    height: 30px;
-    margin-top: 70px;
-    margin-bottom: 10px;
-    margin-left: 5px;
-    background-color: #fff;
-    color: #6f42c1;
+
+.msg {
+    position: relative;
+    color: #f00;
+}
+
+.form_login form input {
+    font-weight: 500;
+    background-color: transparent;
+    border-bottom: 1px solid #C2C2C2;
+    color: #000;
+    height: 40px;
+    width: 70%;
+}
+
+.form_login form input:focus {
+    color: #1F7F45;
+    border-color: #1F7F45;
+}
+
+.form_login form input[type='submit'] {
+    border: none;
+    width: 70%;
+    height: 35px;
+    font-size: 16px;
+    background-color: #E6E6E6;
+    color: #C2C2C2;
     cursor: pointer;
+    border-radius: 20px;
+}
+
+.form_login form input[type='submit']:hover {
+    background-color: #1F7F45;
+    color: #FFF;
+}
+
+a {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
 }

@@ -12,19 +12,20 @@
 </head>
 <body>
     <div class="formLoginArea">
+    <?php
+            if(isset($_POST['email_login'])){
+            include __DIR__ .'/../php/login/login.php';
+            }
+            ?>
         <div class="form_login">
             <form action="?" method="post">
                 <input type="text" name="email_login" placeholder="Email" required><br>
                 <input type="password" name="password_login" placeholder="Senha" required><br>
                 <input type="submit" value="Entrar" class="btnLogin" name="btnLogin"><br>
-                <p style="margin-left:30px;color:#fff">Não possui uma conta? <a style="color:#fff" href="../index.php">Cadastrar</a></p>
+                <p style="color:#fff">Não possui uma conta? <a href="../index.php">Cadastrar</a></p>
             </form>
-            <?php
-            if(isset($_POST['email_login'])){
-            include __DIR__ .'/../php/login/login.php';
-            }
-            ?>
         </div>
+        
     </div>
 </body>
 </html>
