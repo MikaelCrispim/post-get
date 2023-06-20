@@ -19,7 +19,7 @@
             ?>
         <div class="form_login">
             <form action="?" method="post">
-                <input type="text" name="email_login" placeholder="Email" required><br>
+                <input type="email" name="email_login" placeholder="Email" required><br>
                 <input type="password" name="password_login" placeholder="Senha" required><br>
                 <input type="submit" value="Entrar" class="btnLogin" name="btnLogin"><br>
                 <p style="color:#fff">Não possui uma conta? <a href="../index.php">Cadastrar</a></p>

@@ -48,7 +48,7 @@ if(mysqli_num_rows($result) > 0) {
         
         echo "<tr>
             <td>" . $row["nome"]. "</td>
-            <td> R$ " . $row["valor"]. "</td>
+            <td> R$ " . number_format($row["valor"], 2, ',', '.'). "</td>
             <td>" . $row["formapagamento"]."</td>
             <td>" . $date->format('d/m/Y')."</td>
             <td>". $row["recebidaenviada"]."</td>
