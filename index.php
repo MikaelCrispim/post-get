@@ -21,14 +21,6 @@
                 <input type="text" name="name" placeholder="Nome" maxlength="15" required autofocus><br>
                 <input type="email" name="email" placeholder="Email" required><br>
                 <input type="password" name="password" placeholder="Senha" minlength="8" required><br>
-                <label style="color:#000">Profissão</label>
-                <select name="profession">
-                    <option value = "administrativo" name="adm">Administrativo</option>
-                    <option value = "comercial" name="cml">Comercial</option>
-                    <option value = "financeiro" name="fin">Financeiro</option>
-                    <option value = "operacional" name="ope">Operacional</option>
-                    <option value = "outro" name="other">Outro</option>
-                </select><br>
                 <input type="submit" value="Cadastrar" class="button" name="btnCadastro">
                 <p style="margin-top:15px;color:#fff">Já possui uma conta? <a href="./src/login.php">Entrar</a></p>
             </form>
